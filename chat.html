@@ -48,24 +48,23 @@ body {margin:0;}
 <html>
 <head>
 <style>
-/* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none;
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    bgcolor="#d6e0f5"; /* Fallback color */
-    bgcolor="#d6e0f5"; /* Black w/ opacity */
-    -webkit-animation-name: fadeIn; /* Fade in the background */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    bgcolor="#d6e0f5";
+    bgcolor="#d6e0f5";
+    -webkit-animation-name: fadeIn;
     -webkit-animation-duration: 0.4s;
     animation-name: fadeIn;
     animation-duration: 0.4s
 }
-/* Modal Content */
+
 .modal-content {
     position: fixed;
     bottom: 0;
@@ -76,7 +75,7 @@ body {margin:0;}
     animation-name: slideIn;
     animation-duration: 0.4s
 }
-/* The Close Button */
+
 .close {
     color: black;
     float: right;
@@ -90,7 +89,6 @@ body {margin:0;}
     cursor: pointer;
 }
 
-/* Add Animation */
 @-webkit-keyframes slideIn {
     from {bottom: -300px; opacity: 0} 
     to {bottom: 0; opacity: 1}
@@ -110,11 +108,8 @@ body {margin:0;}
 </style>
 </head>
 <body>
-<!-- Trigger/Open The Modal -->
 <button id="myBtn">Hangouts</button>
-<!-- The Modal -->
 <div id="myModal" class="modal">
-  <!-- Modal content -->
   <div class="modal-content">
     <div class="modal-header">
       <span class="close">&times;</span>
@@ -124,23 +119,18 @@ body {margin:0;}
     </div>
   </div>
 </div>
-<script>
-// Get the modal
+
 var modal = document.getElementById('myModal');
-// Get the button that opens the modal
 var btn = document.getElementById("myBtn");
-// Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
-// When the user clicks the button, open the modal 
 btn.onclick = function() {
     modal.style.display = "block";
 }
-// When the user clicks on <span> (x), close the modal
+
 span.onclick = function() {
     modal.style.display = "none";
 }
 
-// When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
